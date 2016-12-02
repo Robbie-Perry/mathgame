@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
+    
     <head>
         <title>Math Game</title>
         <link href="styles/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -13,6 +13,8 @@
                 <div class="col-sm-8 col-sm-offset-2"><h1>Please login to play.</h1></div>
                 <div class="col-sm-2"></div>
             </div>
+            <br/>
+            <br/>   
             
             <!--Email Address-->
             <form action="authenticate.php" method="post" role="form" class="form-horizontal">
@@ -33,9 +35,20 @@
                     <div class="col-sm-5"></div>
                 </div>
                 
+                <br/>
+                <div class="col-sm-3 col-sm-offset-3">
+                    <p class="red">
+                        <?php 
+                            if (isset($_GET["msg"])) {
+                                echo  $_GET["msg"];
+                            }
+                        ?>
+                    </p>
+                </div>
+                
                 <!--Button-->
                 <div class="row">
-                    <div class="col-sm-3 col-sm-offset-4">
+                    <div class="col-sm-3 col-sm-offset-2">
                         <button type="submit" class="btn btn-success">Login</button>
                     </div>
                 </div>
